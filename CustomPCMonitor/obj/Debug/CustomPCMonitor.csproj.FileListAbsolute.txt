@@ -1,0 +1,15 @@
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.exe.config
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.exe
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.pdb
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.AssemblyReference.cache
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\MainWindow.baml
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\Styles.baml
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\MainWindow.g.cs
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\App.g.cs
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor_MarkupCompile.cache
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.g.resources
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.Properties.Resources.resources
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.GenerateResource.cache
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.CoreCompileInputs.cache
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.exe
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.pdb
