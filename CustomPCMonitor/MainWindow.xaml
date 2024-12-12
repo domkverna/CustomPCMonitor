@@ -4,6 +4,7 @@
         Title="MainWindow" 
         Height="450" 
         Width="800">
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -12,15 +13,16 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <DockPanel>
+    <DockPanel Background="#FF4C4C4C">
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File" >
-                <MenuItem Header="New" />
+            <MenuItem Header="_File" Foreground="White" Height="30" FontSize="15" >
+                <MenuItem Header="New" Background="#FF2E2E2E" />
                 <MenuItem Header="Open..." />
                 <Separator />
-                <MenuItem Header="Exit" />
+                <MenuItem Header="Exit" Click="ExitMenuItem_Click" />
             </MenuItem>
-            <MenuItem Header="_Edit">
+
+            <MenuItem Header="_Edit" FontSize="15">
                 <MenuItem Header="Undo" />
                 <MenuItem Header="Redo" />
                 <Separator />
