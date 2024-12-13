@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\custompcmonitor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|c:\\users\\dkv_2\\source\\repos\\custompcmonitor\\custompcmonitor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|solutionrelative:custompcmonitor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|c:\\users\\dkv_2\\source\\repos\\custompcmonitor\\custompcmonitor\\styles.xaml||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|solutionrelative:custompcmonitor\\styles.xaml||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\custompcmonitor\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|solutionrelative:custompcmonitor\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\custompcmonitor\\styles.xaml||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F6396BCC-CA5D-429D-9665-AE891D9AAB4F}|CustomPCMonitor\\CustomPCMonitor.csproj|solutionrelative:custompcmonitor\\styles.xaml||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\CustomPCMonitor\\Styles.xaml",
               "RelativeDocumentMoniker": "CustomPCMonitor\\Styles.xaml",
               "ToolTip": "C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\CustomPCMonitor\\Styles.xaml",
               "RelativeToolTip": "CustomPCMonitor\\Styles.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-11T19:31:43.741Z",
               "EditorCaption": ""
@@ -51,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\CustomPCMonitor\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "CustomPCMonitor\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\dkv_2\\source\\repos\\CustomPCMonitor\\CustomPCMonitor\\MainWindow.xaml.cs",
               "RelativeToolTip": "CustomPCMonitor\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAuwFgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T17:19:38.524Z",
               "EditorCaption": ""

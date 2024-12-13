@@ -10,10 +10,14 @@
 
     <!-- Style for MenuItem -->
     <Style TargetType="MenuItem">
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="#2e2e2e"/> 
+        <Setter Property="Foreground" Value="Black"/>
+        <!-- <Setter Property="Background" Value="#2e2e2e"/> --> 
     </Style>
 
-    
+    <!-- Style for ContextMenu -->
+    <Style TargetType="ContextMenu">
+        <Setter Property="Foreground" Value="White"/>
+        <!-- <Setter Property="Background" Value="#2e2e2e"/> --> 
+    </Style>
 
 </ResourceDictionary>

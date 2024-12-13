@@ -3,8 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" 
         Height="450" 
-        Width="800">
-    
+        Width="800"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="White">
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,23 +16,48 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <DockPanel Background="#FF4C4C4C">
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File" Foreground="White" Height="30" FontSize="15" >
-                <MenuItem Header="New" Background="#FF2E2E2E" />
-                <MenuItem Header="Open..." />
-                <Separator />
-                <MenuItem Header="Exit" Click="ExitMenuItem_Click" />
-            </MenuItem>
 
-            <MenuItem Header="_Edit" FontSize="15">
-                <MenuItem Header="Undo" />
-                <MenuItem Header="Redo" />
-                <Separator />
-                <MenuItem Header="Cut" />
-                <MenuItem Header="Copy" />
-                <MenuItem Header="Paste" />
-            </MenuItem>
-        </Menu>
-    </DockPanel>
+    <Menu Background="#2e2e2e">
+        <Menu.ItemsPanel>
+            <ItemsPanelTemplate>
+                <Grid>
+                    <!-- Define two columns: one for left-aligned items and one for the right-aligned item -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"    />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ItemsPanelTemplate>
+        </Menu.ItemsPanel>
+
+        <!-- Left-aligned menu items -->
+        <MenuItem x:Name="fileButton" Header="_File" Grid.Column="0" FontSize="15" Foreground="White" Width="50" />
+        <MenuItem x:Name="editButton" Header="_Edit" Grid.Column="1" FontSize="15" Foreground="White" />
+        <MenuItem x:Name="ViewButton" Header="_View" Grid.Column="2" FontSize="15" Foreground="White" />
+        <MenuItem x:Name="helpButton" Header="_Help" Grid.Column="3" FontSize="15" Foreground="White" Click="MenuItem_Click" />
+
+
+        <!-- Add some fricken Space thing to grab the window -->
+        <!-- Right-aligned menu item -->
+        <MenuItem x:Name="minimizeWindow" Header="&#x1F5D5;" Grid.Column="5" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" Click="minimizeWindow_Click" />
+        <MenuItem x:Name="resizeWindow" Header="&#x1F5D6;" Grid.Column="6" FontSize="15" Foreground="White" Click="ResizeWindow_Click" />
+        <MenuItem x:Name="closeWindow" Header="&#x2715;" Grid.Column="7" FontSize="15" Foreground="White" Click="ExitMenuItem_Click" />
+
+    </Menu>
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Option 1" Click="Option1_Click" />
+            <MenuItem Header="Option 2" Click="Option2_Click" />
+            <Separator />
+            <MenuItem Header="Exit" Click="ExitMenuItem_Click" />
+        </ContextMenu>
+    </Window.ContextMenu>
+
 </Window>
