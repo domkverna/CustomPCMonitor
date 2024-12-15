@@ -6,7 +6,7 @@
         Width="800"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="White">
+        Background="#FF5A5A5A">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -17,39 +17,96 @@
     </Window.Resources>
 
 
-    <Menu Background="#2e2e2e">
-        <Menu.ItemsPanel>
-            <ItemsPanelTemplate>
-                <Grid>
-                    <!-- Define two columns: one for left-aligned items and one for the right-aligned item -->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"    />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                </Grid>
-            </ItemsPanelTemplate>
-        </Menu.ItemsPanel>
+    <Grid>
+        <Menu Background="#2e2e2e" Width="Auto">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <!-- Define two columns: one for left-aligned items and one for the right-aligned item -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*"    />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
 
-        <!-- Left-aligned menu items -->
-        <MenuItem x:Name="fileButton" Header="_File" Grid.Column="0" FontSize="15" Foreground="White" Width="50" />
-        <MenuItem x:Name="editButton" Header="_Edit" Grid.Column="1" FontSize="15" Foreground="White" />
-        <MenuItem x:Name="ViewButton" Header="_View" Grid.Column="2" FontSize="15" Foreground="White" />
-        <MenuItem x:Name="helpButton" Header="_Help" Grid.Column="3" FontSize="15" Foreground="White" Click="MenuItem_Click" />
+            <!-- Left-aligned menu items -->
+            <MenuItem x:Name="fileButton" 
+                Header="_File" 
+                Grid.Column="0" 
+                FontSize="15" 
+                Foreground="White">
+                <MenuItem Header="New" />
+                <MenuItem Header="Open..." />
+                <Separator />
+                <MenuItem Header="Exit"
+                    Click="ExitMenuItem_Click"/>
+            </MenuItem>
+
+                <MenuItem x:Name="editButton" 
+                      Header="_Edit" 
+                      Grid.Column="1" 
+                      FontSize="15" 
+                      Foreground="White" />
+            <MenuItem x:Name="ViewButton" 
+                      Header="_View" 
+                      Grid.Column="2" 
+                      FontSize="15" 
+                      Foreground="White" />
+            <MenuItem x:Name="helpButton" 
+                      Header="_Help" 
+                      Grid.Column="3" 
+                      FontSize="15" 
+                      Foreground="White" 
+                      Click="MenuItem_Click" />
+
+            <!-- Add some fricken Space thing to grab the window -->
+            <MenuItem Header="    " Grid.Column="4" FontSize="15" Foreground="White" />
+            
+            <!-- Right-aligned menu item -->
+            <MenuItem x:Name="minimizeWindow" Header="&#x1F5D5;" Grid.Column="5" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" Click="minimizeWindow_Click" />
+            <MenuItem x:Name="resizeWindow" Header="&#x1F5D6;" Grid.Column="6" FontSize="15" Foreground="White" Click="ResizeWindow_Click" />
+            <MenuItem x:Name="closeWindow" Header="&#x2715;" Grid.Column="7" FontSize="15" Foreground="White" Click="ExitMenuItem_Click" />
+
+        </Menu>
+        
+        
+        <Label Content="Custom PC Monitor" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               FontSize="72" 
+               Margin="0,47,0,0" 
+               Height="100"/>
+        <Button Content="Start" 
+                HorizontalAlignment="Center" 
+                Margin="0,225,0,0" 
+                VerticalAlignment="Top"  
+                FontSize="48" 
+                Width="234" 
+                Background="{x:Null}"/>
+        <Button Content="Import" 
+                HorizontalAlignment="Center" 
+                Margin="0,298,0,0" 
+                VerticalAlignment="Top"  
+                FontSize="48" Width="234" 
+                Background="{x:Null}"/>
+        <Button Content="Exit" 
+                HorizontalAlignment="Center" 
+                Margin="0,371,0,0" 
+                VerticalAlignment="Top" 
+                Click="ExitMenuItem_Click" 
+                FontSize="48" Width="234" 
+                Background="{x:Null}" />
+    </Grid>
 
 
-        <!-- Add some fricken Space thing to grab the window -->
-        <!-- Right-aligned menu item -->
-        <MenuItem x:Name="minimizeWindow" Header="&#x1F5D5;" Grid.Column="5" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" Click="minimizeWindow_Click" />
-        <MenuItem x:Name="resizeWindow" Header="&#x1F5D6;" Grid.Column="6" FontSize="15" Foreground="White" Click="ResizeWindow_Click" />
-        <MenuItem x:Name="closeWindow" Header="&#x2715;" Grid.Column="7" FontSize="15" Foreground="White" Click="ExitMenuItem_Click" />
-
-    </Menu>
 
     <Window.ContextMenu>
         <ContextMenu>
