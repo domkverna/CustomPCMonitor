@@ -13,3 +13,6 @@ C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMo
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.CoreCompileInputs.cache
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.exe
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.pdb
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.g.cs
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor_MarkupCompile.lref
+C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.baml
