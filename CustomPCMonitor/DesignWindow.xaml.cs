@@ -25,11 +25,6 @@ namespace CustomPCMonitor
             InitializeComponent();
         }
 
-        private void MainWindow_ContextMenuOpening(object sender, ContextMenuEventArgs e)
-        {
-            // Optional: Add dynamic logic for the context menu here, if needed.
-        }
-
         private void Option1_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Option 1 clicked!");

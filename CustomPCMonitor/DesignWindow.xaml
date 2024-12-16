@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomPCMonitor"
         mc:Ignorable="d"
-        Title="DesignWindow" Height="450" Width="800"
+        Title="DesignWindow" Height="768" Width="1366"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="#FF5A5A5A">
-    
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -20,7 +20,8 @@
 
 
     <Grid>
-        <Menu Background="#2e2e2e" Width="Auto">
+        <Canvas Margin="43,24,43,24" Background="White" Width="800" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Menu Background="#2e2e2e">
             <Menu.ItemsPanel>
                 <ItemsPanelTemplate>
                     <Grid>
@@ -45,8 +46,10 @@
             Grid.Column="0" 
             FontSize="15" 
             Foreground="White">
-                <MenuItem Header="New" />
-                <MenuItem Header="Open..." />
+                <MenuItem Header="New" 
+                          Click="StartButton_Click"/>
+                <MenuItem Header="Open..." 
+                          Click="ImportButton_Click"/>
                 <Separator />
                 <MenuItem Header="Exit"
                 Click="ExitMenuItem_Click"/>
@@ -70,7 +73,6 @@
                   Click="MenuItem_Click" />
 
             <!-- Add some fricken Space thing to grab the window -->
-            <MenuItem Header="    " Grid.Column="4" FontSize="15" Foreground="White" />
 
             <!-- Right-aligned menu item -->
             <MenuItem x:Name="minimizeWindow" Header="&#x1F5D5;" Grid.Column="5" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" Click="minimizeWindow_Click" />
@@ -78,6 +80,32 @@
             <MenuItem x:Name="closeWindow" Header="&#x2715;" Grid.Column="7" FontSize="15" Foreground="White" Click="ExitMenuItem_Click" />
 
         </Menu>
+        
+        <StackPanel Margin="0,22,1316,0"/>
+
+        <Menu Background="#2e2e2e" VerticalAlignment="Bottom" Height="21.95">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <!-- Define two columns: one for left-aligned items and one for the right-aligned item -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*"    />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+
+            <!-- Left-aligned menu items -->
+            
+        </Menu>
+
     </Grid>
 
 
