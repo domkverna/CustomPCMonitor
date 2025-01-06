@@ -19,36 +19,45 @@
             </Grid.ColumnDefinitions>
 
             <Menu Background="Transparent" Foreground="White" FontSize="14" Grid.Column="0" VerticalContentAlignment="Center">
-                <MenuItem Header="_File">
-                    <MenuItem Header="New" Click="NewFile_Click" />
-                    <MenuItem Header="Open..." Click="OpenFile_Click" />
-                    <MenuItem Header="Save" Click="SaveFile_Click" />
+                <MenuItem Header="_File"
+                          Name ="FileButton">
+                    <MenuItem Header="New" 
+                              Click="NewFile_Click" 
+                              Foreground="Black"/>
+                    <MenuItem Header="Open..." 
+                              Click="OpenFile_Click" 
+                              Foreground="Black"/>
+                    <MenuItem Header="Save" 
+                              Click="SaveFile_Click" 
+                              Foreground="Black"/>
                     <Separator />
-                    <MenuItem Header="Exit" Click="Exit_Click" />
+                    <MenuItem Header="Exit" Click="Exit_Click" Foreground="Black"/>
                 </MenuItem>
-                
+
                 <MenuItem Header="_Edit">
-                    <MenuItem Header="Undo" Click="Undo_Click" />
-                    <MenuItem Header="Redo" Click="Redo_Click" />
+                    <MenuItem Header="Undo" Click="Undo_Click" Foreground="Black"/>
+                    <MenuItem Header="Redo" Click="Redo_Click" Foreground="Black"/>
                 </MenuItem>
 
                 <MenuItem Header="_Help">
-                    <MenuItem Header="About" Click="About_Click" />
+                    <MenuItem Header="About" Click="About_Click" Foreground="Black"/>
                 </MenuItem>
             </Menu>
 
             <Button Content="&#x1F5D5;" 
-                Width="30"  
-                Grid.Column="2" 
-                Background="Transparent" 
-                Foreground="White" 
-                Click="Minimize_Click" BorderBrush="{x:Null}" />
+                    Width="30"  
+                    Grid.Column="2" 
+                    Background="Transparent" 
+                    Foreground="White" 
+                    Click="Minimize_Click" BorderBrush="#00000000" 
+                    Name="MinimizeButton"/>
 
             <Button Content="&#x1F5D6;" 
                     Width="30"  
                     Grid.Column="3" 
                     Background="#00000000" 
-                    Foreground="#FF787878" BorderBrush="{x:Null}"/>
+                    Foreground="#FF787878" BorderBrush="#00000000"
+                    Name="MaximizeButton"/>
             <!--Click="Maximize_Click" BorderBrush="{x:Null}"-->
 
             <Button Content="&#x2715;" 
@@ -56,21 +65,23 @@
                     Grid.Column="4" 
                     Background="Transparent" 
                     Foreground="White" 
-                    Click="Close_Click" BorderBrush="{x:Null}" />
+                    Click="Close_Click" BorderBrush="Transparent" 
+                    Name="ExitButton"/>
         </Grid>
 
         <Label Content="Custom PC Monitor" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                FontSize="48" 
-               Foreground="White" Margin="0,72,0,0" />
+               Foreground="White" Margin="0,55,0,0" />
 
         <Border BorderBrush="White" 
                 BorderThickness="1" 
-                Margin="266,186,266,186"
+                Margin="266,169,266,203"
                 CornerRadius="5"
-                MouseLeftButtonDown="NewFile_Click">
-                <Border.Style>
+                MouseLeftButtonDown="NewFile_Click"
+                Name ="StartBorder">
+            <Border.Style>
                 <Style TargetType="Border">
                     <Setter Property="Background" Value="Transparent" />
                     <Style.Triggers>
@@ -80,14 +91,14 @@
                     </Style.Triggers>
                 </Style>
             </Border.Style>
-                <Label Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+            <Label Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
         </Border>
 
         <Border BorderBrush="White" 
                 BorderThickness="1" 
-                Margin="266,269,266,103"
+                Margin="266,252,266,120"
                 CornerRadius="5">
-                <Border.Style>
+            <Border.Style>
                 <Style TargetType="Border">
                     <Setter Property="Background" Value="Transparent" />
                     <Style.Triggers>
@@ -97,15 +108,15 @@
                     </Style.Triggers>
                 </Style>
             </Border.Style>
-                <Label Content="Open" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+            <Label Content="Open" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
         </Border>
 
         <Border BorderBrush="White" 
                 BorderThickness="1" 
-                Margin="266,352,266,20"
+                Margin="266,335,266,37"
                 CornerRadius="5"
                 MouseLeftButtonDown="Close_Click">
-                <Border.Style>
+            <Border.Style>
                 <Style TargetType="Border">
                     <Setter Property="Background" Value="Transparent" />
                     <Style.Triggers>
@@ -115,7 +126,7 @@
                     </Style.Triggers>
                 </Style>
             </Border.Style>
-                <Label Content="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+            <Label Content="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
         </Border>
     </Grid>
 </Window>

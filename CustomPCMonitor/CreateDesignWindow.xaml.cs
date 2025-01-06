@@ -1,15 +1,17 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace CustomPCMonitor
 {
-    public partial class Window1 : Window
+    public partial class CreateDesignWindow : Window
     {
-        public Window1()
+        public CreateDesignWindow()
         {
             InitializeComponent();
         }
-
-        // Allow dragging the window only when clicking the title bar
         private void CustomTitleBar_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (e.ChangedButton == System.Windows.Input.MouseButton.Left)
@@ -17,12 +19,10 @@ namespace CustomPCMonitor
                 this.DragMove();
             }
         }
-
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
         private void Maximize_Click(object sender, RoutedEventArgs e)
         {
             if (this.WindowState == WindowState.Maximized)
@@ -34,45 +34,25 @@ namespace CustomPCMonitor
                 this.WindowState = WindowState.Maximized;
             }
         }
-
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
 
-        private void NewFile_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("New File action triggered");
+            // Get a reference to the main window
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow != null)
+            {
+                // Enable the FileButton
+                mainWindow.FileButton.IsEnabled = true;
+                mainWindow.MinimizeButton.IsEnabled = true;
+                mainWindow.MaximizeButton.IsEnabled = true;
+                mainWindow.ExitButton.IsEnabled = true;
+                mainWindow.StartBorder.IsEnabled = true;
+            }
         }
-
-        private void OpenFile_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Open File action triggered");
-        }
-
-        private void SaveFile_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Save File action triggered");
-        }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void Undo_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Undo action triggered");
-        }
-
-        private void Redo_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Redo action triggered");
-        }
-
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("This is a custom PC monitor application.");
         }
     }
 }
