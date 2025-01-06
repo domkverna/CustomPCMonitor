@@ -4,121 +4,118 @@
         Title="MainWindow" 
         Height="450" 
         Width="800"
-        WindowStyle="None"
         AllowsTransparency="True"
+        WindowStyle="None"
         Background="#FF5A5A5A">
 
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Styles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-
-
     <Grid>
-        <Menu Background="#2e2e2e" Width="Auto">
-            <Menu.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <Grid>
-                        <!-- Define two columns: one for left-aligned items and one for the right-aligned item -->
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*"    />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                    </Grid>
-                </ItemsPanelTemplate>
-            </Menu.ItemsPanel>
+        <Grid x:Name="CustomTitleBar" Background="#2e2e2e" Height="25" VerticalAlignment="Top" MouseLeftButtonDown="CustomTitleBar_MouseLeftButtonDown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
 
-            <!-- Left-aligned menu items -->
-            <MenuItem x:Name="fileButton" 
-                Header="_File" 
-                Grid.Column="0" 
-                FontSize="15" 
-                Foreground="White">
-                <MenuItem Header="New" 
-                          Click="StartButton_Click"/>
-                <MenuItem Header="Open..." 
-                          Click="ImportButton_Click"/>
-                <Separator />
-                <MenuItem Header="Exit"
-                    Click="ExitMenuItem_Click"/>
-            </MenuItem>
+            <Menu Background="Transparent" Foreground="White" FontSize="14" Grid.Column="0" VerticalContentAlignment="Center">
+                <MenuItem Header="_File">
+                    <MenuItem Header="New" Click="NewFile_Click" />
+                    <MenuItem Header="Open..." Click="OpenFile_Click" />
+                    <MenuItem Header="Save" Click="SaveFile_Click" />
+                    <Separator />
+                    <MenuItem Header="Exit" Click="Exit_Click" />
+                </MenuItem>
+                
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="Undo" Click="Undo_Click" />
+                    <MenuItem Header="Redo" Click="Redo_Click" />
+                </MenuItem>
 
-                <MenuItem x:Name="editButton" 
-                      Header="_Edit" 
-                      Grid.Column="1" 
-                      FontSize="15" 
-                      Foreground="White" />
-            <MenuItem x:Name="ViewButton" 
-                      Header="_View" 
-                      Grid.Column="2" 
-                      FontSize="15" 
-                      Foreground="White" />
-            <MenuItem x:Name="helpButton" 
-                      Header="_Help" 
-                      Grid.Column="3" 
-                      FontSize="15" 
-                      Foreground="White" 
-                      Click="MenuItem_Click" />
+                <MenuItem Header="_Help">
+                    <MenuItem Header="About" Click="About_Click" />
+                </MenuItem>
+            </Menu>
 
-            <!-- Add some fricken Space thing to grab the window -->
-            <MenuItem Header="    " Grid.Column="4" FontSize="15" Foreground="White" />
-            
-            <!-- Right-aligned menu item -->
-            <MenuItem x:Name="minimizeWindow" Header="&#x1F5D5;" Grid.Column="5" FontSize="15" Foreground="White" HorizontalContentAlignment="Center" Click="minimizeWindow_Click" />
-            <MenuItem x:Name="resizeWindow" Header="&#x1F5D6;" Grid.Column="6" FontSize="15" Foreground="White" Click="ResizeWindow_Click" />
-            <MenuItem x:Name="closeWindow" Header="&#x2715;" Grid.Column="7" FontSize="15" Foreground="White" Click="ExitMenuItem_Click" />
+            <Button Content="&#x1F5D5;" 
+                Width="30"  
+                Grid.Column="2" 
+                Background="Transparent" 
+                Foreground="White" 
+                Click="Minimize_Click" BorderBrush="{x:Null}" />
 
-        </Menu>
-        
-        
+            <Button Content="&#x1F5D6;" 
+                    Width="30"  
+                    Grid.Column="3" 
+                    Background="#00000000" 
+                    Foreground="#FF787878" BorderBrush="{x:Null}"/>
+            <!--Click="Maximize_Click" BorderBrush="{x:Null}"-->
+
+            <Button Content="&#x2715;" 
+                    Width="30"  
+                    Grid.Column="4" 
+                    Background="Transparent" 
+                    Foreground="White" 
+                    Click="Close_Click" BorderBrush="{x:Null}" />
+        </Grid>
+
         <Label Content="Custom PC Monitor" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
-               FontSize="72" 
-               Margin="0,47,0,0" 
-               Height="100"/>
-        <Button Content="Start" 
-                HorizontalAlignment="Center" 
-                Margin="0,225,0,0" 
-                VerticalAlignment="Top"  
-                FontSize="48" 
-                Width="234" 
-                Background="{x:Null}"
-                Click="StartButton_Click"/>
-        <Button Content="Import" 
-                HorizontalAlignment="Center" 
-                Margin="0,298,0,0" 
-                VerticalAlignment="Top"  
-                FontSize="48" Width="234" 
-                Background="{x:Null}"
-                Click="ImportButton_Click"/>
-        <Button Content="Exit" 
-                HorizontalAlignment="Center" 
-                Margin="0,371,0,0" 
-                VerticalAlignment="Top" 
-                Click="ExitMenuItem_Click" 
-                FontSize="48" Width="234" 
-                Background="{x:Null}" />
+               FontSize="48" 
+               Foreground="White" Margin="0,72,0,0" />
+
+        <Border BorderBrush="White" 
+                BorderThickness="1" 
+                Margin="266,186,266,186"
+                CornerRadius="5"
+                MouseLeftButtonDown="NewFile_Click">
+                <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF2E2E2E" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+                <Label Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+        </Border>
+
+        <Border BorderBrush="White" 
+                BorderThickness="1" 
+                Margin="266,269,266,103"
+                CornerRadius="5">
+                <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF2E2E2E" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+                <Label Content="Open" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+        </Border>
+
+        <Border BorderBrush="White" 
+                BorderThickness="1" 
+                Margin="266,352,266,20"
+                CornerRadius="5"
+                MouseLeftButtonDown="Close_Click">
+                <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF2E2E2E" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+                <Label Content="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="White"/>
+        </Border>
     </Grid>
-
-
-
-    <Window.ContextMenu>
-        <ContextMenu>
-            <MenuItem Header="Option 1" Click="Option1_Click" />
-            <MenuItem Header="Option 2" Click="Option2_Click" />
-            <Separator />
-            <MenuItem Header="Exit" Click="ExitMenuItem_Click" />
-        </ContextMenu>
-    </Window.ContextMenu>
-
 </Window>

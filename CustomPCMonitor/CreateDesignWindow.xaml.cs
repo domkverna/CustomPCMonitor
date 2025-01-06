@@ -1,14 +1,10 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
+﻿using System.Windows;
 
 namespace CustomPCMonitor
 {
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
         }
@@ -21,8 +17,6 @@ namespace CustomPCMonitor
                 this.DragMove();
             }
         }
-
-        
 
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
@@ -79,11 +73,6 @@ namespace CustomPCMonitor
         private void About_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("This is a custom PC monitor application.");
-        }
-
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }

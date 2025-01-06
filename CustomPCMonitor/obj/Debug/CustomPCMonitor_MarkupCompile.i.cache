@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\App.xaml
-3-2031662395
+3-901463195
 
-7723656023
+7-1857340437
 17-439003439
-DesignWindow.xaml;MainWindow.xaml;Styles.xaml;
+MainWindow.xaml;CreateDesignWindow.xaml;Styles.xaml;
 
-True
+False
 
