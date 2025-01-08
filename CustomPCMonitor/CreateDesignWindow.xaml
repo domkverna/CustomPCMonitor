@@ -46,7 +46,37 @@
                 Foreground="White" 
                 Click="Close_Click" BorderBrush="{x:Null}" />
         </Grid>
-        
-        
+        <Label Content="Set Width" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="10,133,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="Width (px)" 
+                 VerticalAlignment="Top" 
+                 Width="200" 
+                 Height="37" 
+                 FontSize="24" 
+                 Background="#FF2E2E2E" 
+                 Foreground="White" 
+                 BorderBrush="{x:Null}" 
+                 FontFamily="Cascadia Code SemiBold" 
+                 PreviewMouseLeftButtonDown="ClearTextboxOnClick"/>
+        <Label Content="Set Height" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="10,234,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="Height (px)" 
+                 VerticalAlignment="Top" 
+                 Width="200" 
+                 Height="36" 
+                 FontSize="24" 
+                 Background="#FF2E2E2E" 
+                 Foreground="White" 
+                 BorderBrush="{x:Null}" 
+                 FontFamily="Cascadia Code SemiBold"
+                 PreviewMouseLeftButtonDown="ClearTextboxOnClick"/>
+        <Label Content="Choose Resolution" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+        <Label Content="Choose a Resolution for the Window" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="20" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+
+
     </Grid>
 </Window>

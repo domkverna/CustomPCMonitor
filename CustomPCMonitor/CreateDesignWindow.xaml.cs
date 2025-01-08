@@ -38,11 +38,9 @@ namespace CustomPCMonitor
         {
             this.Close();
 
-            // Get a reference to the main window
             var mainWindow = Application.Current.MainWindow as MainWindow;
             if (mainWindow != null)
             {
-                // Enable the FileButton
                 mainWindow.FileButton.IsEnabled = true;
                 mainWindow.MinimizeButton.IsEnabled = true;
                 mainWindow.MaximizeButton.IsEnabled = true;
@@ -53,6 +51,15 @@ namespace CustomPCMonitor
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void ClearTextboxOnClick(object sender, MouseButtonEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox.Text == "Width (px)" || textBox.Text == "Height (px)")
+            {
+                textBox.Text = string.Empty;
+            }
         }
     }
 }
