@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -60,6 +61,34 @@ namespace CustomPCMonitor
             {
                 textBox.Text = string.Empty;
             }
+        }
+        // Allow only numeric input
+        private void NumericTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextNumeric(e.Text); // Reject non-numeric input
+        }
+
+        // Prevent non-numeric pasting
+        private void NumericTextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            if (e.DataObject.GetDataPresent(DataFormats.Text))
+            {
+                string pastedText = (string)e.DataObject.GetData(DataFormats.Text);
+                if (!IsTextNumeric(pastedText))
+                {
+                    e.CancelCommand(); // Reject the paste operation
+                }
+            }
+            else
+            {
+                e.CancelCommand(); // Reject the paste operation
+            }
+        }
+
+        // Utility to check if the input is numeric
+        private static bool IsTextNumeric(string text)
+        {
+            return Regex.IsMatch(text, @"^\d+$"); // Matches only digits (0-9)
         }
     }
 }

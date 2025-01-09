@@ -47,19 +47,22 @@
                 Click="Close_Click" BorderBrush="{x:Null}" />
         </Grid>
         <Label Content="Set Width" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="10,133,0,0" 
-                 TextWrapping="Wrap" 
-                 Text="Width (px)" 
-                 VerticalAlignment="Top" 
-                 Width="200" 
-                 Height="37" 
-                 FontSize="24" 
-                 Background="#FF2E2E2E" 
-                 Foreground="White" 
-                 BorderBrush="{x:Null}" 
-                 FontFamily="Cascadia Code SemiBold" 
-                 PreviewMouseLeftButtonDown="ClearTextboxOnClick"/>
+        <TextBox x:Name="widthTextBox"
+         HorizontalAlignment="Left" 
+         Margin="10,133,0,0" 
+         TextWrapping="Wrap" 
+         Text="Width (px)" 
+         VerticalAlignment="Top" 
+         Width="200" 
+         Height="37" 
+         FontSize="24" 
+         Background="#FF2E2E2E" 
+         Foreground="White" 
+         BorderBrush="{x:Null}" 
+         FontFamily="Cascadia Code SemiBold" 
+         PreviewMouseLeftButtonDown="ClearTextboxOnClick"
+         PreviewTextInput="NumericTextBox_PreviewTextInput"
+         DataObject.Pasting="NumericTextBox_Pasting" />
         <Label Content="Set Height" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" 
                  Margin="10,234,0,0" 
@@ -73,9 +76,35 @@
                  Foreground="White" 
                  BorderBrush="{x:Null}" 
                  FontFamily="Cascadia Code SemiBold"
-                 PreviewMouseLeftButtonDown="ClearTextboxOnClick"/>
-        <Label Content="Choose Resolution" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+                 PreviewMouseLeftButtonDown="ClearTextboxOnClick"
+                 Name="heightTextBox"
+                 PreviewTextInput="NumericTextBox_PreviewTextInput"
+                 DataObject.Pasting="NumericTextBox_Pasting" />
+        <Label Content="Choose Device" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" FontSize="24" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
         <Label Content="Choose a Resolution for the Window" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="20" Background="Transparent" FontFamily="Cascadia Code SemiBold" Foreground="White"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="0,25,0,0" Panel.ZIndex="-1">
+            <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" 
+                     Margin="9,310,241,28"
+                     Background="#FF2E2E2E"
+                     Foreground="White" BorderBrush="{x:Null}" FontFamily="Cascadia Code SemiBold"/>
+        </Border>
+        <Border BorderBrush="White" 
+            BorderThickness="1" 
+            Margin="290,176,50,176"
+            CornerRadius="5"
+            x:Name ="StartBorder">
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF2E2E2E" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Label Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="White" FontFamily="Cascadia Code SemiBold"/>
+        </Border>
 
 
     </Grid>
