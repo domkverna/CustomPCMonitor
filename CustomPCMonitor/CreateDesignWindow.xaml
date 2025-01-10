@@ -89,10 +89,11 @@
                      Foreground="White" BorderBrush="{x:Null}" FontFamily="Cascadia Code SemiBold"/>
         </Border>
         <Border BorderBrush="White" 
-            BorderThickness="1" 
-            Margin="290,176,50,176"
-            CornerRadius="5"
-            x:Name ="StartBorder">
+                BorderThickness="1" 
+                Margin="290,176,50,176"
+                CornerRadius="5"
+                x:Name ="StartBorder"
+                MouseLeftButtonDown="ApplyCanvasSize_Click">
             <Border.Style>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="Background" Value="Transparent" />

@@ -93,5 +93,6 @@ namespace CustomPCMonitor
             designCanvas.Width = width;
             designCanvas.Height = height;
         }
+
     }
 }

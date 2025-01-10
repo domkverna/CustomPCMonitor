@@ -9,6 +9,8 @@ namespace CustomPCMonitor
 {
     public partial class CreateDesignWindow : Window
     {
+        private DesignWindow designWindow;
+
         public CreateDesignWindow()
         {
             InitializeComponent();
@@ -89,6 +91,23 @@ namespace CustomPCMonitor
         private static bool IsTextNumeric(string text)
         {
             return Regex.IsMatch(text, @"^\d+$"); // Matches only digits (0-9)
+        }
+        private void ApplyCanvasSize_Click(object sender, RoutedEventArgs e)
+        {
+            // Parse the width and height from the textboxes
+            if (double.TryParse(widthTextBox.Text, out double width) &&
+                double.TryParse(heightTextBox.Text, out double height))
+            {
+                // Ensure the window is open
+                if (designWindow == null || !designWindow.IsVisible)
+                {
+                    designWindow = new DesignWindow();
+                    designWindow.Show();
+                }
+
+                // Update the canvas size
+                designWindow.UpdateCanvasSize(width, height);
+            }
         }
     }
 }

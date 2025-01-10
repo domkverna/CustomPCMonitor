@@ -59,9 +59,9 @@
                 Width="30"  
                 Grid.Column="3" 
                 Background="#00000000" 
-                Foreground="#FF787878" BorderBrush="#00000000"
-                Name="MaximizeButton"/>
-            <!--Click="Maximize_Click" BorderBrush="{x:Null}"-->
+                Foreground="White" BorderBrush="#00000000"
+                Name="MaximizeButton"
+                Click="Maximize_Click"/>
 
             <Button Content="&#x2715;" 
                 Width="30"  
