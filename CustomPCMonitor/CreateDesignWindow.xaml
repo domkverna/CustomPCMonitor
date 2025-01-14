@@ -10,7 +10,8 @@
         Width="450"
         AllowsTransparency="True"
         WindowStyle="None"
-        Background="#FF5A5A5A">
+        Background="#FF5A5A5A"
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <!--This is the Menu Bar-->
@@ -51,7 +52,7 @@
          HorizontalAlignment="Left" 
          Margin="10,133,0,0" 
          TextWrapping="Wrap" 
-         Text="Width (px)" 
+         Text="400" 
          VerticalAlignment="Top" 
          Width="200" 
          Height="37" 
@@ -67,7 +68,7 @@
         <TextBox HorizontalAlignment="Left" 
                  Margin="10,234,0,0" 
                  TextWrapping="Wrap" 
-                 Text="Height (px)" 
+                 Text="300" 
                  VerticalAlignment="Top" 
                  Width="200" 
                  Height="36" 

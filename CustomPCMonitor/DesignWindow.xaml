@@ -10,9 +10,84 @@
         Width="800"
         AllowsTransparency="True"
         WindowStyle="None"
-        Background="#FF5A5A5A">
+        Background="#FF5A5A5A"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid x:Name="CustomTitleBar" Background="#2e2e2e" Height="25" VerticalAlignment="Top" MouseLeftButtonDown="CustomTitleBar_MouseLeftButtonDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="86"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" 
+                       Fill="#3E3E3E" 
+                       Margin="0,25,1,0"/>
+
+            <ScrollViewer Grid.Column="1" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto">
+                <Canvas Background="White" 
+                        Name="designCanvas"
+                        MouseWheel="Canvas_MouseWheel">
+                </Canvas>
+            </ScrollViewer>
+            <Border BorderBrush="Black" 
+                    BorderThickness="1" 
+                    Margin="0,25,1,380"
+                    Name="borderLabel"
+                    Height="45"
+                    VerticalAlignment="Top">
+                    <!--MouseLeftButtonDown=""-->
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" 
+                                Value="Transparent" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" 
+                                     Value="True">
+                                <Setter Property="Background" 
+                                        Value="#FF2E2E2E" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <Label Content="Label" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="24" 
+                       Foreground="White"/>
+            </Border>
+            <Border BorderBrush="Black" 
+                    BorderThickness="1" 
+                    Margin="0,69,1,0"
+                    Name="imageLabel"
+                    Height="45"
+                    VerticalAlignment="Top">
+                    <!--Click=""-->
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" 
+                                Value="Transparent" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" 
+                                     Value="True">
+                                <Setter Property="Background" 
+                                        Value="#FF2E2E2E" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <Label Content="Image" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="24" 
+                       Foreground="White"/>
+            </Border>
+        </Grid>
+        <Grid x:Name="CustomTitleBar" 
+              Background="#2e2e2e" 
+              Height="25" 
+              VerticalAlignment="Top" 
+              MouseLeftButtonDown="CustomTitleBar_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -20,60 +95,65 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-
-            <Menu Background="Transparent" Foreground="White" FontSize="14" Grid.Column="0" VerticalContentAlignment="Center">
-                <MenuItem Header="_File"
-                      Name ="FileButton">
+            <Menu Background="Transparent" 
+                  Foreground="White" 
+                  FontSize="14" 
+                  Grid.Column="0" 
+                  VerticalContentAlignment="Center">
+                <MenuItem Header="_File" 
+                          Name="FileButton">
                     <MenuItem Header="New" 
-                          Click="NewFile_Click" 
-                          Foreground="Black"/>
+                              Click="NewFile_Click" 
+                              Foreground="Black"/>
                     <MenuItem Header="Open..." 
-                          Click="OpenFile_Click" 
-                          Foreground="Black"/>
+                              Click="OpenFile_Click" 
+                              Foreground="Black"/>
                     <MenuItem Header="Save" 
-                          Click="SaveFile_Click" 
-                          Foreground="Black"/>
-                    <Separator />
-                    <MenuItem Header="Exit" Click="Exit_Click" Foreground="Black"/>
+                              Click="SaveFile_Click" 
+                              Foreground="Black"/>
+                    <Separator/>
+                    <MenuItem Header="Exit" 
+                              Click="Exit_Click" 
+                              Foreground="Black"/>
                 </MenuItem>
-
                 <MenuItem Header="_Edit">
-                    <MenuItem Header="Undo" Click="Undo_Click" Foreground="Black"/>
-                    <MenuItem Header="Redo" Click="Redo_Click" Foreground="Black"/>
+                    <MenuItem Header="Undo" 
+                              Click="Undo_Click" 
+                              Foreground="Black"/>
+                    <MenuItem Header="Redo" 
+                              Click="Redo_Click" 
+                              Foreground="Black"/>
                 </MenuItem>
-
                 <MenuItem Header="_Help">
-                    <MenuItem Header="About" Click="About_Click" Foreground="Black"/>
+                    <MenuItem Header="About" 
+                              Click="About_Click" 
+                              Foreground="Black"/>
                 </MenuItem>
             </Menu>
-
             <Button Content="&#x1F5D5;" 
-                Width="30"  
-                Grid.Column="2" 
-                Background="Transparent" 
-                Foreground="White" 
-                Click="Minimize_Click" BorderBrush="#00000000" 
-                Name="MinimizeButton"/>
-
+                    Width="30" 
+                    Grid.Column="2" 
+                    Background="Transparent" 
+                    Foreground="White" 
+                    Click="Minimize_Click" 
+                    BorderBrush="#00000000" 
+                    Name="MinimizeButton"/>
             <Button Content="&#x1F5D6;" 
-                Width="30"  
-                Grid.Column="3" 
-                Background="#00000000" 
-                Foreground="White" BorderBrush="#00000000"
-                Name="MaximizeButton"
-                Click="Maximize_Click"/>
-
+                    Width="30" 
+                    Grid.Column="3" 
+                    Background="#00000000" 
+                    Foreground="White" 
+                    BorderBrush="#00000000" 
+                    Name="MaximizeButton" 
+                    Click="Maximize_Click"/>
             <Button Content="&#x2715;" 
-                Width="30"  
-                Grid.Column="4" 
-                Background="Transparent" 
-                Foreground="White" 
-                Click="Close_Click" BorderBrush="Transparent" 
-                Name="ExitButton"/>
+                    Width="30" 
+                    Grid.Column="4" 
+                    Background="Transparent" 
+                    Foreground="White" 
+                    Click="Close_Click" 
+                    BorderBrush="Transparent" 
+                    Name="ExitButton"/>
         </Grid>
-        <Canvas Background="White" 
-                Width="400" 
-                Height="300"
-                Name="designCanvas"/>
     </Grid>
 </Window>

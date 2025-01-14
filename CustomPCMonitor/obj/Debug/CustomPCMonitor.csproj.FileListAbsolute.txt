@@ -18,3 +18,23 @@ C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMo
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\CreateDesignWindow.baml
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.g.cs
 C:\Users\dkv_2\source\repos\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.baml
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.exe.config
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.exe
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\bin\Debug\CustomPCMonitor.pdb
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.AssemblyReference.cache
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\MainWindow.baml
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\Styles.baml
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CreateDesignWindow.g.cs
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.g.cs
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\MainWindow.g.cs
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\App.g.cs
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor_MarkupCompile.cache
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor_MarkupCompile.lref
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CreateDesignWindow.baml
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\DesignWindow.baml
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.g.resources
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.Properties.Resources.resources
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.GenerateResource.cache
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.csproj.CoreCompileInputs.cache
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.exe
+E:\Custom PC Monitor\CustomPCMonitor\CustomPCMonitor\obj\Debug\CustomPCMonitor.pdb

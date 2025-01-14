@@ -6,7 +6,8 @@
         Width="800"
         AllowsTransparency="True"
         WindowStyle="None"
-        Background="#FF5A5A5A">
+        Background="#FF5A5A5A"
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid x:Name="CustomTitleBar" Background="#2e2e2e" Height="25" VerticalAlignment="Top" MouseLeftButtonDown="CustomTitleBar_MouseLeftButtonDown">

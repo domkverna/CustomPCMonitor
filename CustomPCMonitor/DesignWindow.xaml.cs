@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,49 @@ namespace CustomPCMonitor
     /// </summary>
     public partial class DesignWindow : Window
     {
+        //Variables
+        private ScaleTransform canvasScaleTransform = new ScaleTransform();
+        private double baseCanvasWidth = 400;
+        private double baseCanvasHeight = 300;
+
         public DesignWindow()
         {
             InitializeComponent();
+
+            designCanvas.RenderTransform = canvasScaleTransform;
+            designCanvas.RenderTransformOrigin = new Point(0.5, 0.5);
+
+        }
+        public void UpdateCanvasSize(double width, double height)
+        {
+            baseCanvasWidth = width;
+            baseCanvasHeight = height;
+
+            // Adjust the canvas size immediately
+            designCanvas.Width = baseCanvasWidth * canvasScaleTransform.ScaleX;
+            designCanvas.Height = baseCanvasHeight * canvasScaleTransform.ScaleY;
+        }
+
+        private void Canvas_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            const double zoomFactor = 1.1;
+            const double minScale = 0.5;
+            const double maxScale = 5.0;
+
+            if (e.Delta > 0 && canvasScaleTransform.ScaleX < maxScale)
+            {
+                canvasScaleTransform.ScaleX *= zoomFactor;
+                canvasScaleTransform.ScaleY *= zoomFactor;
+            }
+            else if (e.Delta < 0 && canvasScaleTransform.ScaleX > minScale)
+            {
+                canvasScaleTransform.ScaleX /= zoomFactor;
+                canvasScaleTransform.ScaleY /= zoomFactor;
+            }
+
+            // Dynamically adjust the canvas size based on the scale and user-defined base dimensions
+            designCanvas.Width = baseCanvasWidth * canvasScaleTransform.ScaleX;
+            designCanvas.Height = baseCanvasHeight * canvasScaleTransform.ScaleY;
         }
         private void CustomTitleBar_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -88,11 +129,9 @@ namespace CustomPCMonitor
         {
             MessageBox.Show("This is a custom PC monitor application.");
         }
-        public void UpdateCanvasSize(double width, double height)
-        {
-            designCanvas.Width = width;
-            designCanvas.Height = height;
-        }
 
+
+        //Debugging
+        
     }
 }

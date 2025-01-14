@@ -59,7 +59,7 @@ namespace CustomPCMonitor
         private void ClearTextboxOnClick(object sender, MouseButtonEventArgs e)
         {
             var textBox = sender as TextBox;
-            if (textBox.Text == "Width (px)" || textBox.Text == "Height (px)")
+            if (textBox.Text == "300" || textBox.Text == "400")
             {
                 textBox.Text = string.Empty;
             }
